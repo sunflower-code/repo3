@@ -1,0 +1,27 @@
+server:
+  port: 8082
+  context-path: /
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/mysql?serverTimezone=UTC
+    username: root
+    password: 123
+  jpa:
+      hibernate:
+        naming:
+          physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+#  jpa:
+#    hibernate.ddl-auto: update
+#    show-sql: true
+#  thymeleaf:
+#    cache: false
+
+
+weixin:
+    app_id: wxdeded2ca6fc5eb48
+    app_secret: 5965ff22b53ae30dac8b6607cc6e78fd
+    url: 'https://api.weixin.qq.com/sns/jscode2session'
+    grant_type: authorization_code
